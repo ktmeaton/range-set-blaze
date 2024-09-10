@@ -2,9 +2,13 @@ name: test
 
 on:
   push:
-  schedule:
-    - cron: '0 0 1 * *'
+    branches:
+      - '*'
   pull_request:
+    branches:
+      - '*'
+  release:
+    types: [published]
   workflow_dispatch:
     
 env:
